@@ -39,28 +39,44 @@ void playGame(int min, int max){
             break;
         }
 
-        // Calculate how close the guess is
         difference = abs(guess - answer);
         
-        if(guess > answer){
-            printf("TOO HIGH! ");
-        }else{
-            printf("TOO LOW! ");
-        }
-
-        // Provide proximity hints
         if(difference == 1){
-            printf("SO CLOSE! Just 1 away!\n");
+            if(guess > answer){
+                printf("TOO HIGH! SO CLOSE! Just 1 below!\n");
+            }else{
+                printf("TOO LOW! SO CLOSE! Just 1 above!\n");
+            }
         }else if(difference <= 5){
-            printf("Very close! Within 5.\n");
+            if(guess > answer){
+                printf("TOO HIGH! Very close! Within 5 below.\n");
+            }else{
+                printf("TOO LOW! Very close! Within 5 above.\n");
+            }
         }else if(difference <= 10){
-            printf("Getting warm! Within 10.\n");
+            if(guess > answer){
+                printf("TOO HIGH! Getting warm! Within 10 below.\n");
+            }else{
+                printf("TOO LOW! Getting warm! Within 10 above.\n");
+            }
         }else if(difference <= 20){
-            printf("Warm! Within 20.\n");
+            if(guess > answer){
+                printf("TOO HIGH! Warm! Within 20 below.\n");
+            }else{
+                printf("TOO LOW! Warm! Within 20 above.\n");
+            }
         }else if(difference <= 50){
-            printf("You're in the neighborhood.\n");
+            if(guess > answer){
+                printf("TOO HIGH! You're in the neighborhood.\n");
+            }else{
+                printf("TOO LOW! You're in the neighborhood.\n");
+            }
         }else{
-            printf("Way off!\n");
+            if(guess > answer){
+                printf("TOO HIGH! Way off!\n");
+            }else{
+                printf("TOO LOW! Way off!\n");
+            }
         }
     }
 }
