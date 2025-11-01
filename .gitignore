@@ -1,0 +1,8 @@
+# Compiled executables
+*.exe
+*.out
+game
+
+# Object files
+*.o
+*.obj
