@@ -9,6 +9,7 @@
 void playGame(int min, int max){
     int answer = (rand() % (max - min + 1)) + min;
     int guess = 0, tries = 0;
+    int difference;
 
     printf("Guess the number between %d and %d\n\n", min, max);
 
@@ -19,8 +20,7 @@ void playGame(int min, int max){
             printf("Invalid input! Enter numbers only.\n");
             while(getchar() != '\n');
             continue;
-            printf("\n");
-    }
+        }
 
         tries++;
 
@@ -29,11 +29,7 @@ void playGame(int min, int max){
             continue;
         }
 
-        if(guess > answer){
-            printf("TOO HIGH! Try again.\n");
-        }else if(guess < answer){
-            printf("TOO LOW! Try again.\n");
-        }else{
+        if(guess == answer){
             printf("CORRECT!\n");
             if(tries == 1){
                 printf("You guessed it in 1 try.\n\n");
@@ -41,6 +37,30 @@ void playGame(int min, int max){
                 printf("You guessed it in %d tries.\n\n", tries);
             }
             break;
+        }
+
+        // Calculate how close the guess is
+        difference = abs(guess - answer);
+        
+        if(guess > answer){
+            printf("TOO HIGH! ");
+        }else{
+            printf("TOO LOW! ");
+        }
+
+        // Provide proximity hints
+        if(difference == 1){
+            printf("SO CLOSE! Just 1 away!\n");
+        }else if(difference <= 5){
+            printf("Very close! Within 5.\n");
+        }else if(difference <= 10){
+            printf("Getting warm! Within 10.\n");
+        }else if(difference <= 20){
+            printf("Warm! Within 20.\n");
+        }else if(difference <= 50){
+            printf("You're in the neighborhood.\n");
+        }else{
+            printf("Way off!\n");
         }
     }
 }
