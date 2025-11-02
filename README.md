@@ -1,58 +1,109 @@
-# 🔢 Number Guessing Game 🎮
+# 🎮 Number Guessing Game
 
-This is a simple, console-based number guessing game written in C. The player must guess a randomly generated number within a selected range, receiving hints based on how close their guess is to the secret number.
+A fun and interactive command-line number guessing game written in C with intelligent proximity hints and multiple difficulty levels!
 
 ## ✨ Features
 
-* **Three Difficulty Levels**:
-    * **Easy (🥳)**: Guess a number between 0 and 50.
-    * **Medium (🤔)**: Guess a number between 0 and 100.
-    * **Hard (🤯)**: Guess a number between 0 and 500.
-* **Dynamic Hints**: The game provides feedback to help you narrow down the guess. It will tell you if your guess is:
-    * 🧊 Way off
-    * 🥶 Somewhat far
-    * 🔥 Getting warm
-    * 🥵 Very close
-    * 🌋 Super close
-* **Directional Guidance**: Each hint also tells you whether to guess a **higher (⬆️)** or **lower (⬇️)** number.
-* **Input Validation (🛡️)**: The game checks for invalid inputs (like letters or symbols) and out-of-range numbers, prompting the user to enter a valid guess.
-* **Try Counter (📊)**: After successfully guessing the number, the game reports how many tries it took.
-* **Play Again (🔄)**: Players are given the option to play another round or quit the game.
+- **Three Difficulty Levels**
+  - 🟢 Easy: Guess numbers between 0-50
+  - 🟡 Medium: Guess numbers between 0-100
+  - 🔴 Hard: Guess numbers between 0-500
 
-## 🕹️ How to Play
+- **Smart Proximity Hints**
+  - Dynamic feedback based on how close you are to the answer
+  - Five levels of hints: "Super close", "Very close", "Getting warm", "Somewhat far", and "Way off"
+  - Hints scale proportionally with the difficulty level
 
-1.  Run the executable program.
-2.  You will be prompted to select a difficulty level (1 for Easy, 2 for Medium, 3 for Hard).
-3.  Enter your choice and press Enter.
-4.  The game will start. Enter a number to make your first guess.
-5.  Read the hint provided to see how close you are and whether your guess was too high or too low.
-6.  Continue guessing until you find the correct number. 🎯
-7.  Once you win, the game will show your total number of tries.
-8.  You will then be asked if you want to play again. Enter `1` for Yes or `2` for No.
+- **User-Friendly Design**
+  - Input validation to handle invalid entries
+  - Range checking to keep guesses within bounds
+  - Try counter to track your performance
+  - Option to play multiple rounds
 
-## 🛠️ How to Compile and Run
+## 🚀 Getting Started
 
 ### Prerequisites
 
-You need a C compiler, such as **GCC**, installed on your system.
+- GCC compiler (or any C compiler)
+- Terminal/Command prompt
 
-### Steps
+### Compilation
+```bash
+gcc number_guessing_game.c -o number_game
+```
 
-1.  **Save the Code**: Save the code into a file named `game.c` (or any name you prefer).
+### Running the Game
+```bash
+./number_game
+```
 
-2.  **Compile the Code**:
-    Open your terminal or command prompt, navigate to the directory where you saved the file, and run the following command:
-    ```sh
-    gcc game.c -o guesser
-    ```
-    This command compiles the `game.c` file and creates an executable file named `guesser`.
+On Windows:
+```bash
+number_game.exe
+```
 
-3.  **Run the Game**:
-    Execute the compiled program by running:
-    ```sh
-    ./guesser
-    ```
-    On Windows, you might just type:
-    ```sh
-    guesser
-    ```
+## 🎯 How to Play
+
+1. Launch the game and select your difficulty level (1-3)
+2. The game will generate a random number within the chosen range
+3. Enter your guesses and follow the proximity hints
+4. Keep guessing until you find the correct number!
+5. Choose whether to play again or exit
+
+## 📋 Example Gameplay
+```
+==== NUMBER GUESSING GAME ====
+
+Select difficulty level:
+1. Easy (0-50)
+2. Medium (0-100)
+3. Hard (0-500)
+Enter choice (1-3): 2
+
+Guess the number between 0 and 100
+
+Enter your guess: 50
+Getting warm. Try a higher number.
+Enter your guess: 75
+Very close. Try a lower number.
+Enter your guess: 68
+Super close! Try a higher number.
+Enter your guess: 70
+CORRECT!
+You guessed it in 4 tries.
+```
+
+## 🛠️ Technical Details
+
+- **Language:** C
+- **Random Number Generation:** Uses `rand()` seeded with current time
+- **Input Handling:** Robust error checking for non-numeric inputs
+- **Hint Algorithm:** Dynamic thresholds based on the number range (2%, 5%, 10%, 20% of range)
+
+## 🎲 Difficulty Settings
+
+| Level | Range | Ideal Tries |
+|-------|-------|-------------|
+| Easy | 0-50 | 6-8 |
+| Medium | 0-100 | 7-10 |
+| Hard | 0-500 | 9-12 |
+
+## 🤝 Contributing
+
+Feel free to fork this project and add your own features! Some ideas:
+- Add a score system
+- Implement a limited tries mode
+- Add sound effects
+- Create a high score leaderboard
+
+## 📝 License
+
+This project is free to use and modify for personal and educational purposes.
+
+## 👨‍💻 Author
+
+Created with ❤️ as a fun C programming exercise
+
+---
+
+**Enjoy the game and happy guessing!** 🎉
