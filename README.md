@@ -29,7 +29,7 @@ A fun and interactive command-line number guessing game written in C with intell
 
 ### Compilation
 ```bash
-gcc number_guessing_game.c -o number_game
+gcc game.c -o number_game
 ```
 
 ### Running the Game
@@ -103,6 +103,8 @@ This project is free to use and modify for personal and educational purposes.
 ## 👨‍💻 Author
 
 Created with ❤️ as a fun C programming exercise
+
+**Repository:** [github.com/vivekwaldia/c-number-guessing-game](https://github.com/vivekwaldia/c-number-guessing-game)
 
 ---
 
