@@ -1,7 +1,7 @@
 # 🎮 Number Guessing Game
 A fun and interactive command-line number guessing game written in C with intelligent proximity hints and multiple difficulty levels!
 
-<img src="gameplay.gif" alt="Gameplay Demo" width="600" />
+<img src="gameplay.gif" width="400" />
 
 ## ✨ Features
 - **Three Difficulty Levels**
