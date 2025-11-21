@@ -1,6 +1,8 @@
 # 🎮 Number Guessing Game
 A fun and interactive command-line number guessing game written in C with intelligent proximity hints and multiple difficulty levels!
 
+![Gameplay Demo](gameplay.gif)
+
 ## ✨ Features
 - **Three Difficulty Levels**
   - 🟢 Easy: Guess numbers between 0-50
@@ -59,33 +61,6 @@ number_game.exe
 3. Enter your guesses and follow the proximity hints
 4. Keep guessing until you find the correct number!
 5. Choose whether to play again or exit
-
-## 📋 Example Gameplay
-```
-==== NUMBER GUESSING GAME ====
-
-Select difficulty level:
-1. Easy (0-50)
-2. Medium (0-100)
-3. Hard (0-500)
-
-Enter choice (1-3): 2
-
-Guess the number between 0 and 100
-
-Enter your guess: 50
-Getting warm. Try a higher number.
-
-Enter your guess: 75
-Very close. Try a lower number.
-
-Enter your guess: 68
-Super close! Try a higher number.
-
-Enter your guess: 70
-CORRECT!
-You guessed it in 4 tries.
-```
 
 ## 🛠️ Technical Details
 - **Language:** C
